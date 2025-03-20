@@ -1,0 +1,63 @@
+{
+  "name": "dpl-tokens",
+  "version": "0.0.1",
+  "description": "Design Tokens for dohjon product language (dpl)",
+  "license": "MIT",
+  "author": "Jonathan Doherty <dohjon@users.noreply.github.com>",
+  "homepage": "https://github.com/dohjon/dpl-tokens#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dohjon/dpl-tokens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dohjon/dpl-tokens/issues"
+  },
+  "type": "module",
+  "main": "scripts/build.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "lint:commit": "commitlint --edit",
+    "lint:staged": "lint-staged",
+    "prepare": "husky",
+    "test": "prettier --check ."
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.8.0",
+    "@commitlint/config-conventional": "19.8.0",
+    "husky": "9.1.7",
+    "lint-staged": "15.5.0",
+    "prettier": "3.5.3",
+    "prettier-package-json": "2.8.0",
+    "semantic-release": "24.2.3"
+  },
+  "keywords": [
+    "design tokens",
+    "figma",
+    "style-dictionary"
+  ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,js,json,yml,md}": [
+      "prettier --write"
+    ],
+    "package.json": [
+      "prettier-package-json --write package.json"
+    ]
+  },
+  "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af",
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "trailingComma": "all"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  }
+}
