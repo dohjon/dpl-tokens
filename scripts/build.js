@@ -11,7 +11,7 @@ const sd = new StyleDictionary({
   platforms: {
     js: {
       transformGroup: 'tokens-studio', // 👈 apply the tokens-studio transformGroup to apply all transforms
-      buildPath: 'build/js/',
+      buildPath: 'dist/',
       transforms: [
         // 'size/pxToRem',
         // 'name/constant',
