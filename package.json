@@ -24,6 +24,7 @@
     "prepare": "husky",
     "test": "prettier --check ."
   },
+  "types": "./dist/tokens.d.ts",
   "devDependencies": {
     "@commitlint/cli": "19.8.0",
     "@commitlint/config-conventional": "19.8.0",
