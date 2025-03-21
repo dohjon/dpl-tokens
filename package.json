@@ -24,11 +24,13 @@
   "devDependencies": {
     "@commitlint/cli": "19.8.0",
     "@commitlint/config-conventional": "19.8.0",
+    "@tokens-studio/sd-transforms": "1.2.12",
     "husky": "9.1.7",
     "lint-staged": "15.5.0",
     "prettier": "3.5.3",
     "prettier-package-json": "2.8.0",
-    "semantic-release": "24.2.3"
+    "semantic-release": "24.2.3",
+    "style-dictionary": "4.3.3"
   },
   "keywords": [
     "design tokens",
@@ -48,7 +50,6 @@
       "prettier-package-json --write package.json"
     ]
   },
-  "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af",
   "prettier": {
     "printWidth": 100,
     "singleQuote": true,
