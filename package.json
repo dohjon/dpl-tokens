@@ -19,6 +19,7 @@
     "lint:commit": "commitlint --edit",
     "lint:staged": "lint-staged",
     "prepare": "husky",
+    "release": "npm run build",
     "test": "prettier --check ."
   },
   "devDependencies": {
