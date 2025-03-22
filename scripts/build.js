@@ -30,4 +30,4 @@ const sd = new StyleDictionary({
 await sd.cleanAllPlatforms();
 await sd.buildAllPlatforms();
 
-console.log('✅ Tokens built!');
+console.log('✅ Tokens built!!');
