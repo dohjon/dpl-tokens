@@ -13,7 +13,13 @@
     "url": "https://github.com/dohjon/dpl-tokens/issues"
   },
   "type": "module",
-  "exports": "./dist/tokens.js",
+  "exports": {
+    ".": {
+      "import": "./dist/tokens.js",
+      "types": "./dist/tokens.d.ts"
+    },
+    "./styles.css": "./dist/variables.css"
+  },
   "files": [
     "dist"
   ],

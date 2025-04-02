@@ -15,7 +15,7 @@ const sd = new StyleDictionary({
       buildPath: 'dist/',
       files: [
         {
-          destination: 'variables.css',
+          destination: 'tokens.css',
           format: 'css/variables',
         },
       ],
@@ -25,12 +25,12 @@ const sd = new StyleDictionary({
       buildPath: 'dist/',
       files: [
         {
-          format: 'javascript/es6',
           destination: 'tokens.js',
+          format: 'javascript/es6',
         },
         {
-          format: 'typescript/es6-declarations',
           destination: 'tokens.d.ts',
+          format: 'typescript/es6-declarations',
         },
       ],
     },
