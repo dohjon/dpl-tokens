@@ -5,6 +5,17 @@ register(StyleDictionary, {
   // excludeParentKeys: true,
 });
 
+StyleDictionary.registerFormat({
+  name: 'custom/json',
+  format: ({ dictionary }) => {
+    const flat = dictionary.allTokens.reduce((acc, token) => {
+      acc[token.path.join('.')] = token.$value;
+      return acc;
+    }, {});
+    return JSON.stringify(flat, null, 2);
+  },
+});
+
 const PREFIX = 'dpl';
 const sd = new StyleDictionary({
   source: ['tokens/**/*.json'],
@@ -17,7 +28,7 @@ const sd = new StyleDictionary({
       files: [
         {
           destination: 'tokens.json',
-          format: 'json/nested',
+          format: 'custom/json',
         },
       ],
     },
@@ -30,6 +41,9 @@ const sd = new StyleDictionary({
         {
           destination: 'tokens.css',
           format: 'css/variables',
+          options: {
+            outputReferences: true,
+          },
         },
       ],
     },
