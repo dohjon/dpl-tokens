@@ -18,6 +18,7 @@
       "import": "./dist/tokens.js",
       "types": "./dist/tokens.d.ts"
     },
+    "./tokens.json": "./dist/tokens.json",
     "./tokens.css": "./dist/tokens.css"
   },
   "files": [
