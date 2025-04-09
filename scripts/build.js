@@ -10,6 +10,17 @@ const sd = new StyleDictionary({
   source: ['tokens/**/*.json'],
   preprocessors: ['tokens-studio'],
   platforms: {
+    json: {
+      transformGroup: 'tokens-studio',
+      prefix: PREFIX,
+      buildPath: 'dist/',
+      files: [
+        {
+          destination: 'tokens.json',
+          format: 'json/nested',
+        },
+      ],
+    },
     css: {
       transformGroup: 'tokens-studio',
       transforms: ['name/kebab'],
@@ -24,7 +35,6 @@ const sd = new StyleDictionary({
     },
     ts: {
       transformGroup: 'tokens-studio',
-      transforms: ['name/snake'],
       buildPath: 'dist/',
       prefix: PREFIX,
       files: [
