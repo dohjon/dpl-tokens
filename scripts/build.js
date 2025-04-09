@@ -2,9 +2,10 @@ import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 
 register(StyleDictionary, {
-  excludeParentKeys: true,
+  // excludeParentKeys: true,
 });
 
+const PREFIX = 'dpl';
 const sd = new StyleDictionary({
   source: ['tokens/**/*.json'],
   preprocessors: ['tokens-studio'],
@@ -12,6 +13,7 @@ const sd = new StyleDictionary({
     css: {
       transformGroup: 'tokens-studio',
       transforms: ['name/kebab'],
+      prefix: PREFIX,
       buildPath: 'dist/',
       files: [
         {
@@ -22,7 +24,9 @@ const sd = new StyleDictionary({
     },
     ts: {
       transformGroup: 'tokens-studio',
+      transforms: ['name/snake'],
       buildPath: 'dist/',
+      prefix: PREFIX,
       files: [
         {
           destination: 'tokens.js',
